@@ -74,6 +74,8 @@ void ASlapsOnlineCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ASlapsOnlineCharacter::OnResetVR);
+
+	PlayerInputComponent->BindAction("Punch", IE_Pressed, this, &ASlapsOnlineCharacter::Punch);
 }
 
 
@@ -137,4 +139,16 @@ void ASlapsOnlineCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ASlapsOnlineCharacter::Punch()
+{
+	if ( (Controller != nullptr))
+	{
+		if(GEngine)
+     		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Punch"));
+		
+		
+	}
+    
 }
