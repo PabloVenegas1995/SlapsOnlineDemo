@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "SlapsOnline (Debug)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnline Win64 Debug Build",
+			"program": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnline (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnline Win64 DebugGame Build",
+			"program": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnline (Development)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnline Win64 Development Build",
+			"program": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnline (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnline Win64 Shipping Build",
+			"program": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnline (Test)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnline Win64 Test Build",
+			"program": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnlineEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnlineEditor Win64 Debug Build",
+			"program": "D:\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\SlapsOnline.uproject"
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnlineEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnlineEditor Win64 DebugGame Build",
+			"program": "D:\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\SlapsOnline.uproject"
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SlapsOnlineEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "SlapsOnlineEditor Win64 Development Build",
+			"program": "D:\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\SlapsOnline.uproject"
+			],
+			"cwd": "D:\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "D:\\UE_4.27\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\SlapsOnline.uproject",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "D:\\UE_4.27"
+		}
+	]
+}

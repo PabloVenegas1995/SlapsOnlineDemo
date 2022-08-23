@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SlapsOnline",
+			"Path": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Source\\SlapsOnline.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SlapsOnlineEditor",
+			"Path": "D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Source\\SlapsOnlineEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

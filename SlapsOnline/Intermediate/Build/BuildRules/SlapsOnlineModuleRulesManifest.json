@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Source\\SlapsOnline\\SlapsOnline.Build.cs",
+		"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Source\\SlapsOnline.Target.cs",
+		"D:\\Repositories\\UnrealProjects\\SlapsOnlineDemo\\SlapsOnline\\Source\\SlapsOnlineEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
