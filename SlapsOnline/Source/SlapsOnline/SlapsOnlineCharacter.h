@@ -4,10 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+
+#include "CombatInterface.h"
+
 #include "SlapsOnlineCharacter.generated.h"
 
 UCLASS(config=Game)
-class ASlapsOnlineCharacter : public ACharacter
+class ASlapsOnlineCharacter : public ACharacter, public ICombatInterface
 {
 	GENERATED_BODY()
 
@@ -28,6 +31,27 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Animations)
+	UAnimMontage* punchMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Animations)
+	UAnimMontage* reactMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Animations)
+	UAnimMontage* dyingMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=SceneReferences)
+	ASlapsOnlineCharacter* opponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=ChProperties)
+	int Health;
+
+	void CheckPunch_Implementation() override;
+
+	FName GetClosestBone(FVector hitBoneLocation, float maxDistance);
+
+	void PunchReact();
 
 protected:
 

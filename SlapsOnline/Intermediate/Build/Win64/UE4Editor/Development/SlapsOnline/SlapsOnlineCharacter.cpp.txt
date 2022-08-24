@@ -6,6 +6,8 @@ D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovemen
 D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\Repositories\UnrealProjects\SlapsOnlineDemo\SlapsOnline\Source\SlapsOnline\CombatInterface.h
+D:\Repositories\UnrealProjects\SlapsOnlineDemo\SlapsOnline\Intermediate\Build\Win64\UE4Editor\Inc\SlapsOnline\CombatInterface.generated.h
 D:\Repositories\UnrealProjects\SlapsOnlineDemo\SlapsOnline\Intermediate\Build\Win64\UE4Editor\Inc\SlapsOnline\SlapsOnlineCharacter.generated.h
 D:\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayFunctionLibrary.h
 D:\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public\HeadMountedDisplayTypes.h

@@ -21,6 +21,8 @@ ASlapsOnlineCharacter::ASlapsOnlineCharacter()
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
 
+	Health = 3;
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -143,12 +145,75 @@ void ASlapsOnlineCharacter::MoveRight(float Value)
 
 void ASlapsOnlineCharacter::Punch()
 {
-	if ( (Controller != nullptr))
+	if ( (Controller != nullptr) && (punchMontage))
+	{	
+		PlayAnimMontage(punchMontage,1,NAME_None);
+		
+	}   
+}
+
+void ASlapsOnlineCharacter::PunchReact()
+{
+	Health--;
+	if (Health > 0)
+		PlayAnimMontage(reactMontage,1,NAME_None);
+	else
 	{
-		if(GEngine)
-     		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Punch"));
-		
-		
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("0 Health"));
+		PlayAnimMontage(dyingMontage,1,NAME_None);
 	}
-    
+}
+
+void ASlapsOnlineCharacter::CheckPunch_Implementation()
+{
+	if(GEngine)
+     		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Punch"));
+
+	FVector handLocation;
+
+	//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("Punching done"));
+	handLocation = GetMesh()->GetBoneLocation("hand_r", EBoneSpaces::WorldSpace);
+	
+	FName hitBone = opponent->GetClosestBone(handLocation, 30);
+
+	if (hitBone != "")
+	{
+		opponent->PunchReact();
+	}
+}
+
+FName ASlapsOnlineCharacter::GetClosestBone(FVector hitBoneLocation, float maxDistance)
+{
+	TArray<FName> boneNames;
+	GetMesh()->GetBoneNames(boneNames);
+
+	FName closestBone;
+	float minDistance = 10000;
+
+	
+	for (int i = 0; i < boneNames.Num(); i++)
+	{
+		FVector boneLocation = GetMesh()->GetBoneLocation(boneNames[i],EBoneSpaces::WorldSpace);
+		float tempDistance = FVector::Dist(hitBoneLocation,boneLocation);
+
+		if (minDistance > tempDistance)
+		{
+			minDistance = tempDistance;
+			closestBone = boneNames[i];
+		}
+	}
+	
+	
+	
+	if (minDistance < maxDistance)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, closestBone.ToString());
+		return closestBone;
+	}
+	else
+	{
+		return "";
+	}
+
+	return closestBone;
 }
